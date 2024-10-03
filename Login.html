@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; /* Necessary for the overlay */
+    overflow: hidden; /* Ensures no scrollbars appear */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://in.images.search.yahoo.com/images/view;_ylt=Awr1Sbgikv5m7lgjrOO9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzRmOWI4NzRiMzczMTJmOTAxYjY0ZDE3NmRkMjk2Y2Q5BGdwb3MDNwRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dlogin%2Bimages%26type%3DE210IN885G0%26fr%3Dmcafee%26fr2%3Dpiv-web%26tab%3Dorganic%26ri%3D7&w=1000&h=1080&imgurl=cdn1.vectorstock.com%2Fi%2F1000x1000%2F03%2F85%2Fregister-page-design-login-form-account-user-vector-23900385.jpg&rurl=https%3A%2F%2Fwww.vectorstock.com%2Froyalty-free-vector%2Fregister-page-design-login-form-account-user-vector-23900385&size=98KB&p=login+images&oid=4f9b874b37312f901b64d176dd296cd9&fr2=piv-web&fr=mcafee&tt=Register+page+design+login+form+account+user+Vector+Image&b=0&ni=21&no=7&ts=&tab=organic&sigr=4Z6QLsgW7vyI&sigb=6GKB7gUUMmZL&sigi=2hKUOHeMeeOP&sigt=qF0tCU6W6th4&.crumb=4EtmLAt6TEg&fr=mcafee&fr2=piv-web&type=E210IN885G0");
+    background-size: cover; 
+    background-position: center;
+    filter: brightness(0.5); /* Darkens the image */
+    z-index: -2; /* Places the image below the form */
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6; /* Adjust opacity to control the fade intensity */
+    z-index: -1; /* Ensures the black overlay is above the image but below the form */
+}
+
+form {
+    max-width: 450px; /* Set a reasonable width for the form */
+    padding: 40px; /* Adequate padding */
+    background-color: rgba(228, 240, 234, 0.9); /* Add transparency to form background */
+    border-radius: 10px; /* Slightly reduced border radius for a subtle look */
+    box-shadow: 0 5px 50px #1c3b7f; 
+    border: 4px solid #1c3b7f; 
+    z-index: 1; /* Keeps the form above everything else */
+    position: relative; /* Ensure proper stacking context */
+}
+
+h2 {
+    margin-top: 0;
+    color: #2462df;
+    text-align: center;
+    font-size: 1.5em; /* Adjust font size for better readability */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1em; /* Adjust font size for labels */
+}
+
+input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px; /* Standardize padding inside inputs */
+    margin-bottom: 15px; /* Increase bottom margin for better spacing */
+    border: 2px solid #2462df;
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 1em; /* Consistent font size */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px; /* Consistent padding */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 108%; /* Ensure the button spans the form width */
+    font-size: 1em; /* Adjust font size */
+}
+
+input[type="submit"]:hover {
+    background-color: #007bff;
+    box-shadow:0 0 10px #007bff, 0 0 15px #007bff;
+}
+
+p {
+    text-align: start;
+    font-size: 1em; /* Slightly smaller text for the paragraph */
+    margin-top: 20px; /* Add spacing above the paragraph */
+}
+
+p a {
+    color: #7f1e1c; /* Matching the form's border color */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
+</style>
+</head>
+<body>
+    <form action="loginSuccess.html">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password">
+        <input type="submit" value="Login">
+        <p>
+            Don't have an account? <a href="index.html"><b>Register</b></a>
+        </p>
+    </form>
+</body>
+</html>
